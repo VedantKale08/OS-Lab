@@ -31,6 +31,6 @@ def lru(page_references_string, frames_count):
     print(f"Page Faults : {page_fault}")
 
 if __name__ == "__main__":
-    page_references_string = [1, 3, 0, 3, 5, 6, 3]
-    frames_count = 3
+    page_references_string = [1, 3, 0, 3, 5, 6, 3, 4, 1, 3, 5, 6, 3]
+    frames_count = 4
     lru(page_references_string, frames_count)
