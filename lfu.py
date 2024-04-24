@@ -8,7 +8,6 @@ def lfu(page_references_string, frames_count):
     hit = 0
     frameMatrix = [['-' for _ in range(len(page_references_string))] for _ in range(frames_count)]
     statusArray = []
-
     for j, page in enumerate(page_references_string):
         page_frequency[page] += 1
         last_used_time[page] = j
@@ -38,6 +37,6 @@ def lfu(page_references_string, frames_count):
     print(f"Page Faults : {page_fault}")
 
 if __name__ == "__main__":
-    page_references_string = [5, 0, 1, 3, 2, 4, 1, 0, 5]
-    frames_count = 4
+    page_references_string = [1,2,3,4,2,1,5]
+    frames_count = 3
     lfu(page_references_string, frames_count)
